@@ -2,6 +2,11 @@
 
 一个面向 AI 产品经理作品集展示的单页交互 Demo，用于帮助用户识别 AI 回答中的事实、推断与待确认内容，降低模型无依据扩展风险。
 
+## 在线 Demo
+
+- 在线体验：https://ai-output-credibility-demo.vercel.app
+- GitHub：https://github.com/MOCCMO/ai-output-credibility-demo
+
 ## 项目背景
 
 本项目基于 **15 组任务、45 条模型回答和 10 条无依据扩展 badcase** 推导，用于展示从模型评测发现、风险归因到产品功能设计的完整链路。
@@ -40,7 +45,7 @@
 环境要求：Node.js 20.19+ 或 22.12+。
 
 ```bash
-cd ai-boundary-demo
+cd ai-output-credibility-demo
 npm install
 npm run dev
 ```
@@ -60,10 +65,10 @@ npm run preview
 
 推荐使用 Git 仓库连接方式：
 
-1. 将 `ai-boundary-demo` 提交并推送到 GitHub、GitLab 或 Bitbucket。
+1. 将项目提交并推送到 GitHub、GitLab 或 Bitbucket。
 2. 登录 Vercel，在 Dashboard 中选择 **Add New → Project**。
 3. 导入对应 Git 仓库。
-4. 如果该项目位于仓库子目录，将 **Root Directory** 设置为 `ai-boundary-demo`；如果仓库根目录就是本项目，则保持默认。
+4. 如果项目位于仓库根目录，保持默认 Root Directory；如果位于子目录，则选择对应目录。
 5. 确认 Framework Preset 为 **Vite**。通常 Vercel 会自动识别；如需手动设置：
    - Build Command：`npm run build`
    - Output Directory：`dist`
@@ -74,7 +79,7 @@ npm run preview
 ## 项目结构
 
 ```text
-ai-boundary-demo/
+ai-output-credibility-demo/
 ├── src/
 │   ├── App.jsx          # 页面内容、静态数据与交互逻辑
 │   ├── index.css        # Tailwind 指令与全局样式
@@ -83,6 +88,7 @@ ai-boundary-demo/
 ├── tailwind.config.js
 ├── postcss.config.js
 ├── vite.config.js
+├── vercel.json         # Vercel 的 Vite 构建与输出配置
 ├── package.json
 └── README.md
 ```
